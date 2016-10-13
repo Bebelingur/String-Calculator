@@ -16,7 +16,7 @@ public class Calculator {
 		return Integer.parseInt(number);
 	}
 
-	private static String[] splitNumbers(Strig numbers){
+	private static String[] splitNumbers(String numbers){
 		return numbers.split(",");
 	}
 
