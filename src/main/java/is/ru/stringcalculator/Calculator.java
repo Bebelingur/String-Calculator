@@ -28,7 +28,7 @@ public class Calculator {
 	private static int sum(String [] array)
 	{	
 		int totalSum = 0;
-		ArrayList<Integer> negativeNumbers = new ArrayList<Integer>(array.length);
+		List negativeNumbers = new ArrayList();
 
 		for(String number : array)
 		{
