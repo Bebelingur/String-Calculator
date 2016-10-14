@@ -1,5 +1,5 @@
 #!/bin/bash
-if[! -d "classes"]
+if ![-d classes];
 then
 	mkdir classes
 fi
