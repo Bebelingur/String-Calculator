@@ -1,11 +1,12 @@
 package is.ru.stringcalculator;
 
 public class Calculator {
+	
 	public static int add(String text) 
 	{
 		if(text.equals(""))
 			return 0;
-		else if(text.contains(",|n")){
+		else if(text.contains(",") || text.contains("\n")){
 			return sum(splitNumbers(text));
 		}
 		else
@@ -19,7 +20,7 @@ public class Calculator {
 
 	private static String [] splitNumbers(String text)
 	{
-		return text.split(",|n");
+		return text.split(",");
 	}
 
 	private static int sum(String [] array)
