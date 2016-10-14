@@ -20,11 +20,6 @@ public class Calculator {
 		return Integer.parseInt(text);
 	}
 
-	private static String toString()
-	{
-		return ",";
-	}
-
 	private static String [] splitNumbers(String text)
 	{
 		return text.split("(,|\n)");
