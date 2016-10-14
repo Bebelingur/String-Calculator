@@ -38,7 +38,7 @@ public class Calculator {
 		}
 		if(negativeNumbers.size() > 0)
 		{
-			throw new IllegalArgumentException("Negatives not allowed: ");
+			throw new IllegalArgumentException("Negatives not allowed: "string.Join(",", negativeNumbers));
 		}
 		int totalSum = 0;
 		for(String number : array)
