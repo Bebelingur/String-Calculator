@@ -38,7 +38,10 @@ public class Calculator {
 			{
 				negativeNumbers.add(intNumber);			
 			}			
+			else if(intNumber <= 1000)
+			{
 				totalSum += intNumber;
+			}
 		}
 		if(negativeNumbers.size() > 0)
 		{
