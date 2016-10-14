@@ -23,11 +23,19 @@ public class Calculator {
 		return text.split("(,|\n)");
 	}
 
-	private static int sum(String [] array)
+	private static int sum(String [] array) throws Exception
 	{	
+		for(String number : array)
+		{
+			if(toInt(number) < 0)
+			{
+				throw new Exception("Negatives not allowed: ")
+			}
+		}
 		int totalSum = 0;
 		for(String number : array)
 		{
+			
 			totalSum += toInt(number);
 		}
 		return totalSum;
