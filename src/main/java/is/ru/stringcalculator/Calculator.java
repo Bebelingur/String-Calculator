@@ -31,12 +31,10 @@ public class Calculator {
 			int indexOfDelimiter = text.indexOf("//") + 2;
 			delimiter = text.substring(indexOfDelimiter, indexOfDelimiter + 1);
 			textWithoutDelimiter = text.substring(text.indexOf("\n") + 1);
-			return textWithoutDelimiter.split(delimiter);
+			
 		}
-		else
-		{
-			return textWithoutDelimiter.split(delimiter);
-		}			
+		
+		return textWithoutDelimiter.split(delimiter);			
 	}
 
 	private static int sum(String [] array)
@@ -58,7 +56,7 @@ public class Calculator {
 		}
 		if(negativeNumbers.size() > 0)
 		{
-			throw new RuntimeException("Negatives not allowed: " + negativeNumbers.toString().replace("[", "").replace("]", "").replace(" ", ""));
+			throw new IllegalArgumentException("Negatives not allowed: " + negativeNumbers.toString().replace("[", "").replace("]", "").replace(" ", ""));
 		}
 		return totalSum;
 	}
