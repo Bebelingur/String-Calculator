@@ -23,7 +23,7 @@ public class Calculator {
 		return text.split("(,|\n)");
 	}
 
-	private static int sum(String [] array) throws Exception
+	private static int sum(String [] array)
 	{	
 		for(String number : array)
 		{
