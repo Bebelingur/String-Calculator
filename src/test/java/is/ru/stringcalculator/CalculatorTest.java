@@ -28,6 +28,11 @@ public class CalculatorTest {
 
 	@Test
 	public void testNewLineWithNumbers(){
+		assertEquals(3, Calculator.add("1\n2"));
+	}
+	
+	@Test
+	public void testNewLineWithNumbers(){
 		assertEquals(6, Calculator.add("1\n2,3"));
 	}
 
