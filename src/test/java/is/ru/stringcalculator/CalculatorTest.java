@@ -33,11 +33,12 @@ public class CalculatorTest {
 
 	@Test
 	public void testNegativeNumber(){
+		RuntimeException exception = null;
 		try
 		{
 			Calculator.add("-1,2");			
 		}
-		catch(IllegalArgumentException e)
+		catch(RuntimeException e)
 		{
 			exception = e;
 		}
@@ -46,12 +47,12 @@ public class CalculatorTest {
 
 	@Test
 	public void testNegativeNumbers(){
-		IllegalArgumentException exception = null;
+		RuntimeException exception = null;
 		try
 		{
 			Calculator.add("2,-4,3,-5");	
 		}
-		catch(IllegalArgumentException e)
+		catch(RuntimeException e)
 		{
 			exception = e;
 		}		
