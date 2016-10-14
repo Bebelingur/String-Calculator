@@ -39,7 +39,7 @@ public class CalculatorTest {
 		}
 		catch(RuntimeException exception)
 		{
-			exception.printStackTrace();
+			assertThat(exception).hasMessage("Negatives not allowed: -1,");
 		}
 	}
 
@@ -51,7 +51,7 @@ public class CalculatorTest {
 		}
 		catch(RuntimeException exception)
 		{
-			exception.printStackTrace();
+			assertThat(exception).hasMessage("Negatives not allowed: -4,-5,");
 		}		
 	}
 }
