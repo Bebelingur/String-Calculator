@@ -36,8 +36,7 @@ public class Calculator {
 		else
 		{
 			return textWithoutDelimiter.split(delimiter);
-		}
-			
+		}			
 	}
 
 	private static int sum(String [] array)
