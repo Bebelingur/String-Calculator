@@ -9,10 +9,6 @@ public class Calculator {
 	{
 		if(text.equals(""))
 			return 0;
-		else if(text.startsWith("//"))
-		{
-			return sum(splitNumbersTakeTwo(text));
-		}
 		else if(text.contains(",") || text.contains("\n")){
 			return sum(splitNumbers(text));
 		}
@@ -25,19 +21,23 @@ public class Calculator {
 		return Integer.parseInt(text);
 	}
 
-	private static String [] splitNumbersTakeTwo(String text)
+	private static String [] splitNumbers(String text)
 	{
-			String delimiter = ",|n";
-			String textWithoutDelimiter = text;
+		String delimiter = "(,|\n)";
+		String textWithoutDelimiter = text;
+				
+		if(text.startsWith("//"))
+		{
 			int indexOfDelimiter = text.indexOf("//") + 2;
 			delimiter = text.substring(indexOfDelimiter, indexOfDelimiter + 1);
 			textWithoutDelimiter = text.substring(text.indexOf("\n") + 1);
-			
 			return textWithoutDelimiter.split(delimiter);
-	}
-	private static String [] splitNumbers(String text)
-	{		
-			return text.split("(,|\n)");
+		}
+		else
+		{
+			return textWithoutDelimiter.split(delimiter);
+		}
+			
 	}
 
 	private static int sum(String [] array)
