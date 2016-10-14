@@ -37,8 +37,8 @@ public class Calculator {
 			if(intNumber < 0)
 			{
 				negativeNumbers.add(intNumber);			
-			}
-			totalSum += intNumber;
+			}			
+				totalSum += intNumber;
 		}
 		if(negativeNumbers.size() > 0)
 		{
