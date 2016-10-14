@@ -29,9 +29,9 @@ public class Calculator {
 	{
 			String delimiter = ",|n";
 			String textWithoutDelimiter = text;
-			int indexOfDelimeter = text.indexOf("//") + 2;
-			delimiter = text.substring(indexOfDelimeter, indexOfDelimeter + 1);
-			textWithoutDelimiter = text.substring(text.indexOf("n") + 1);
+			int indexOfDelimiter = text.indexOf("//") + 2;
+			delimiter = text.substring(indexOfDelimiter, indexOfDelimiter + 1);
+			textWithoutDelimiter = text.substring(text.indexOf("\n") + 1);
 			
 			return textWithoutDelimiter.split(delimiter);
 	}
