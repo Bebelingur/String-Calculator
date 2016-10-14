@@ -1,5 +1,7 @@
 package is.ru.stringcalculator;
 
+import java.util.ArrayList;
+
 public class Calculator {
 	
 	public static int add(String text) 
