@@ -27,19 +27,18 @@ public class Calculator {
 
 	private static int sum(String [] array)
 	{	
-		ArrayList<String> negativeNumbers = new ArrayList<String>(array.length);
+		ArrayList<Integer> negativeNumbers = new ArrayList<Integer>(array.length);
 
 		for(String number : array)
 		{
 			if(toInt(number) < 0)
 			{
-				negativeNumbers.add(number);
-				negativeNumbers.add(",");				
+				negativeNumbers.add(toInt(number));			
 			}
 		}
 		if(negativeNumbers.size() > 0)
 		{
-			throw new RuntimeException("Negatives not allowed: ", negativeNumbers);
+			throw new RuntimeException("Negatives not allowed: ");
 		}
 		int totalSum = 0;
 		for(String number : array)
