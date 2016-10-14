@@ -38,7 +38,9 @@ public class CalculatorTest {
 			Calculator.add("-1,2");			
 		}
 		catch(RuntimeException exception)
-		{}
+		{
+			exception.printStackTrace();
+		}
 	}
 
 	@Test
@@ -48,6 +50,8 @@ public class CalculatorTest {
 			Calculator.add("2,-4,3,-5");	
 		}
 		catch(RuntimeException exception)
-		{}		
+		{
+			exception.printStackTrace();
+		}		
 	}
 }
