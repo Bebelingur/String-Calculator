@@ -30,7 +30,7 @@ public class Calculator {
 		{
 			int indexOfDelimiter = text.indexOf("//") + 2;
 			delimiter = text.substring(indexOfDelimiter, indexOfDelimiter + 1);
-			textWithoutDelimiter = text.substring(text.indexOf("\n") + 1);			
+			textWithoutDelimiter = text.substring(text.indexOf("\n") + 1);					
 		}
 		
 		return textWithoutDelimiter.split(delimiter);			
