@@ -47,7 +47,7 @@ public class CalculatorTest {
 		{
 			Calculator.add("2,-4,3,-5");	
 		}
-		catch(RuntimeException exception)
+		catch(IllegalArgumentException exception)
 		{}		
 	}
 }
