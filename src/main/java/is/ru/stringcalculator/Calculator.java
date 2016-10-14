@@ -41,7 +41,7 @@ public class Calculator {
 		}
 		if(negativeNumbers.size() > 0)
 		{
-			throw new IllegalArgumentException("Negatives not allowed: " + negativeNumbers.toString());
+			throw new RuntimeException("Negatives not allowed: " + negativeNumbers.toString());
 		}
 		return totalSum;
 	}
