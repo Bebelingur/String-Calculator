@@ -31,7 +31,7 @@ public class Calculator {
 			int indexOfDelimeter = text.indexOf("//") + 2;
 			delimiter = text.substring(indexOfDelimeter, indexOfDelimeter + 1);
 			textWithoutDelimiter = text.substring(text.indexOf("n") + 1);
-			return text.split(delimiter);
+			return text.split(textWithoutDelimiter);
 	}
 	private static String [] splitNumbers(String text)
 	{		
