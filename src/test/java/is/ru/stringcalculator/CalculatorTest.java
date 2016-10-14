@@ -37,17 +37,24 @@ public class CalculatorTest {
 		{
 			Calculator.add("-1,2");			
 		}
-		catch(RuntimeException exception)
-		{}
+		catch(IllegalArgumentException e)
+		{
+			exception = e;
+		}
+		assertEquals("Negatives not allowed: -1", exception.getMessage());
 	}
 
 	@Test
 	public void testNegativeNumbers(){
+		IllegalArgumentException exception = null;
 		try
 		{
 			Calculator.add("2,-4,3,-5");	
 		}
-		catch(IllegalArgumentException exception)
-		{}		
+		catch(IllegalArgumentException e)
+		{
+			exception = e;
+		}		
+		assertEquals("Negatives not allowed: -4,-5", exception.getMessage());
 	}
 }

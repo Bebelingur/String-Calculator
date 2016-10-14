@@ -20,6 +20,11 @@ public class Calculator {
 		return Integer.parseInt(text);
 	}
 
+	private static String toString()
+	{
+		return ",";
+	}
+
 	private static String [] splitNumbers(String text)
 	{
 		return text.split("(,|\n)");
@@ -27,6 +32,7 @@ public class Calculator {
 
 	private static int sum(String [] array)
 	{	
+		int totalSum = 0;
 		ArrayList<Integer> negativeNumbers = new ArrayList<Integer>(array.length);
 
 		for(String number : array)
@@ -35,16 +41,11 @@ public class Calculator {
 			{
 				negativeNumbers.add(toInt(number));			
 			}
+			totalSum += toInt(number);
 		}
 		if(negativeNumbers.size() > 0)
 		{
-			throw new IllegalArgumentException("Negatives not allowed: " + string.Join(",", negativeNumbers));
-		}
-		int totalSum = 0;
-		for(String number : array)
-		{
-			
-			totalSum += toInt(number);
+			throw new IllegalArgumentException("Negatives not allowed: " + negativeNumbers.toString());
 		}
 		return totalSum;
 	}
