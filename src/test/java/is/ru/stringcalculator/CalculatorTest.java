@@ -27,7 +27,7 @@ public class CalculatorTest {
 	}
 
 	@Test
-	public void testNewLineWithNumbers(){
+	public void testNewLineWithTwoNumbers(){
 		assertEquals(3, Calculator.add("1\n2"));
 	}
 	
