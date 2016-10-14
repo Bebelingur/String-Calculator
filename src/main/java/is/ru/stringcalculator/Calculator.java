@@ -42,7 +42,7 @@ public class Calculator {
 		}
 		if(negativeNumbers.size() > 0)
 		{
-			throw new RuntimeException("Negatives not allowed: " + negativeNumbers.toString());
+			throw new RuntimeException("Negatives not allowed: " + negativeNumbers.toString().replace("[", "").replace("]", "").replace(" ", ""));
 		}
 		return totalSum;
 	}
