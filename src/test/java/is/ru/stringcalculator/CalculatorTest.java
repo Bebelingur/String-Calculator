@@ -2,6 +2,8 @@ package is.ru.stringcalculator;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertThat;
+import static org.junit.rules.ExpectedException;
+import org.junit.Rule;
 import org.junit.Test;
 
 public class CalculatorTest {
