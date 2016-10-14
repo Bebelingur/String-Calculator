@@ -5,7 +5,7 @@ public class Calculator {
 			if(text.equals(""))
 				return 0;
 			else if(text.contains(",")){
-				String [] numbers = text.split(",");
+				String [] numbers = splitNumbers(text);
 				return toInt(numbers[0]) + toInt(numbers[1]);
 			}
 			else
@@ -14,6 +14,10 @@ public class Calculator {
 
 	private static int toInt(String text){
 		return Integer.parseInt(text);
+	}
+
+	private static String [] splitNumbers(String text){
+		return text.split(",");
 	}
 
 }
