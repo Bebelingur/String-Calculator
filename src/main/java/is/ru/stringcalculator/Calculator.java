@@ -5,9 +5,8 @@ public class Calculator {
 	{
 		if(text.equals(""))
 			return 0;
-		else if(text.contains(",|\n")){
-			String[] numbers = splitNumbers(text);
-			return sum(numbers);
+		else if(text.contains(",|n"){
+			return sum(splitNumbers(text));
 		}
 		else
 			return toInt(text);
@@ -20,7 +19,7 @@ public class Calculator {
 
 	private static String [] splitNumbers(String text)
 	{
-		return text.split(",|\n");
+		return text.split(",|n");
 	}
 
 	private static int sum(String [] array)
