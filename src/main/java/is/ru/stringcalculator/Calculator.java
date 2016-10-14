@@ -25,7 +25,7 @@ public class Calculator {
 		return Integer.parseInt(text);
 	}
 
-	private static string [] splitNumbersTakeTwo(String text)
+	private static String [] splitNumbersTakeTwo(String text)
 	{
 			String delimiter, textWithoutDelimiter;
 			int indexOfDelimeter = text.indexOf("//") + 2;
