@@ -33,11 +33,12 @@ public class Calculator {
 
 		for(String number : array)
 		{
-			if(toInt(number) < 0)
+			int intNumber = toInt(number);
+			if(intNumber < 0)
 			{
-				negativeNumbers.add(toInt(number));			
+				negativeNumbers.add(intNumber);			
 			}
-			totalSum += toInt(number);
+			totalSum += intNumber;
 		}
 		if(negativeNumbers.size() > 0)
 		{
