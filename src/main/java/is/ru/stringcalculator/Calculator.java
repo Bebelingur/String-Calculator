@@ -29,7 +29,7 @@ public class Calculator {
 		{
 			if(toInt(number) < 0)
 			{
-				throw new Exception("Negatives not allowed: ")
+				throw new RuntimeException("Negatives not allowed: ");
 			}
 		}
 		int totalSum = 0;

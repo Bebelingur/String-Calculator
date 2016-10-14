@@ -33,7 +33,12 @@ public class CalculatorTest {
 
 	@Test
 	public void testNegativeNumber(){
-		Calculator.add("-1,2");
+		try
+		{
+			Calculator.add("-1,2");			
+		}
+		catch(RuntimeException exception)
+		{}
 	}
 
 	@Test
