@@ -43,6 +43,11 @@ public class CalculatorTest {
 
 	@Test
 	public void testNegativeNumbers(){
-		Calculator.add("2,-4,3,-5");
+		try
+		{
+			Calculator.add("2,-4,3,-5");	
+		}
+		catch(RuntimeException exception)
+		{}		
 	}
 }
