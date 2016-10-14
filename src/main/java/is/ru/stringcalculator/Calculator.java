@@ -27,7 +27,8 @@ public class Calculator {
 
 	private static String [] splitNumbersTakeTwo(String text)
 	{
-			String delimiter, textWithoutDelimiter;
+			String delimiter = ",|n";
+			String textWithoutDelimiter = text;
 			int indexOfDelimeter = text.indexOf("//") + 2;
 			delimiter = text.substring(indexOfDelimeter, indexOfDelimeter + 1);
 			textWithoutDelimiter = text.substring(text.indexOf("n") + 1);
