@@ -6,10 +6,11 @@ public class Calculator {
 		if(text.equals(""))
 			return 0;
 		else if(text.contains(",|\n")){
-			return sum(splitNumbers(text));
+			String[] numbers = splitNumbers(text);
+			return sum(numbers);
 		}
 		else
-			return 1;
+			return toInt(text);
 	}
 
 	private static int toInt(String text)
